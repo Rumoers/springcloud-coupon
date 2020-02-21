@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: coupon-eureka
+
+# eureka server 端口号9090
+server:
+  port: 9090
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 标识是否从 Eureka Server 获取注册信息, 默认是 true.
+    # 如果这是一个单节点的 Eureka Server 不需要同步其他节点的数据, 设置为 false
+    fetch-registry: false
+    # 是否将自己注册到 Eureka Server, 默认是 true.
+    # 由于当前应用是单节点的 Eureka Server 需要设置为 false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
