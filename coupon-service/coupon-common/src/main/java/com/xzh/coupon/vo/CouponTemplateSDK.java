@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 微服务之间用的优惠券模板信息定义
+ * 微服务之间调用的优惠券模板信息定义
  */
 @Data
 @NoArgsConstructor

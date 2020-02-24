@@ -62,10 +62,14 @@ public class TemplateRule {
     @AllArgsConstructor
     public static class Discount {
 
-        /** 额度: 满减(20), 折扣(85), 立减(10) */
+        /** 优惠的额度:
+         * 满减(20),
+         * 折扣(85),
+         * 立减(10)，
+         */
         private Integer quota;
 
-        /** 基准, 需要满多少才可用 */
+        /** 基准, 需要满多少才可用优惠券 */
         private Integer base;
 
         boolean validate() {

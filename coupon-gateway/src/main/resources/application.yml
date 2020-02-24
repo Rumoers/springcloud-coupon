@@ -7,7 +7,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://server1:${server.port}/eureka/
+      # 注册到eureka server
+      defaultZone: http://server1:9090/eureka/
 zuul:
   prefix: /coupon
   routes:
@@ -17,9 +18,12 @@ zuul:
       serviceId: coupon-template
       strip-prefix: false
   host:
+    #超时时间
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
 
+#负载均衡
 ribbon:
+  #超时时间
   ConnectTimeout: 15000
   ReadTimeout: 15000
