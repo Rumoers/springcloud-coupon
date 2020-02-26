@@ -17,6 +17,16 @@ zuul:
       path: /template/**
       serviceId: coupon-template
       strip-prefix: false
+    # 优惠券分发微服务路由配置定义
+    distribution:
+      path: /distribution/**
+      serviceId: coupon-distribution
+      strip-prefix: false
+    #  优惠券结算微服务路由配置定义
+    settlement:
+      path: /settlement/**
+      serviceId: coupon-settlement
+      strip-prefix: false
   host:
     #超时时间
     connect-timeout-millis: 15000

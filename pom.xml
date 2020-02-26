@@ -6,7 +6,14 @@
 
     <groupId>com.xzh.coupon</groupId>
     <artifactId>springcloud-coupon</artifactId>
+    <!--  多模块项目  父模块打包方式为pom  -->
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>coupon-eureka</module>
+        <module>coupon-gateway</module>
+        <module>coupon-service</module>
+    </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -45,16 +52,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- 配置远程仓库 -->
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+
 
 </project>

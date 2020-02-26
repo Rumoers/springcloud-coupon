@@ -14,6 +14,9 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>coupon-common</module>
+        <module>coupon-template</module>
+        <module>coupon-distribution</module>
+        <module>coupon-settlement</module>
     </modules>
 
 

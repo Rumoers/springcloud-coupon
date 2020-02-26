@@ -1,0 +1,15 @@
+server:
+  port: 9094
+  servlet:
+    context-path: /settlement
+
+spring:
+  application:
+    name: coupon-settlement
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8000/eureka/
+logging:
+  level:
+    com.yzh.coupon: debug

@@ -1,0 +1,67 @@
+server:
+  port: 9093
+  servlet:
+    context-path: /distribution
+spring:
+  application:
+    name: coupon-distribution
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.show_sql: true
+      hibernate.format_sql: true
+    open-in-view: false
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/coupon_data?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    # 连接池
+    hikari:
+      maximum-pool-size: 8
+      minimum-idle: 4
+      idle-timeout: 30000
+      connection-timeout: 30000
+      max-lifetime: 45000
+      auto-commit: true
+      pool-name: CouponHikariCP
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    # 连接超时时间
+    timeout: 10000
+  kafka:
+    bootstrap-servers:
+      - 127.0.0.1:9089
+    consumer:
+      group-id: coupon-x
+      auto-offset-reset: latest
+  # 开启 ribbon 重试机制, 即获取服务失败是否从另外一个节点重试
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8000/eureka/
+logging:
+  level:
+    com.yzh.coupon: debug
+
+# feign 相关的配置
+feign:
+  client:
+    config:
+      default:  # 全局的
+        connectTimeout: 2000  # 默认的连接超时时间是 10s
+        readTimeout: 5000     #读取接口超时时间
+      coupon-template:        # 单独服务的配置
+        connectTimeout: 3000  # 默认的连接超时时间是 10s
+        readTimeout: 5000
+  hystrix:
+    enabled: true             # Hystrix 默认是关闭的

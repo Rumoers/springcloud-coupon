@@ -25,7 +25,7 @@ public class SettlementInfo {
     /** 商品列表 */
     private List<GoodsInfo> goodsInfos;
 
-    /** 优惠券列表 */
+    /** 优惠券列表 可使用多张优惠券*/
     private List<CouponAndTemplateInfo> couponAndTemplateInfos;
 
     /** 是否使结算生效, 即核销。 true-核销;false-结算 */
