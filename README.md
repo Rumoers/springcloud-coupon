@@ -13,9 +13,9 @@ Redis<br>
 Kafka<br>
 
 ## 系统架构图
-![tu1](https://github.com/Rumoers/springcloud-coupon/blob/master/png/coupon1.png)
 
-![tu2](https://github.com/Rumoers/springcloud-coupon/blob/master/png/coupon2.png)
+
+![系统结构图](https://github.com/Rumoers/springcloud-coupon/blob/master/png/coupon2.png)
 ## 模块划分
 
 模版模块：提供给运营人员，运营人员根据要求构建优惠券模版
