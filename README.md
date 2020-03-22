@@ -13,4 +13,6 @@ Redis<br>
 Kafka<br>
 
 ## 系统架构图
+![](https://github.com/Rumoers/springcloud-coupon/blob/master/png/coupon1.png)
+
 ![](https://github.com/Rumoers/springcloud-coupon/blob/master/png/coupon2.png)
