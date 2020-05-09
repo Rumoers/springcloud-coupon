@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="coupon-eureka" />
         <module name="coupon-template" />
-        <module name="coupon-common" />
+        <module name="coupon-settlement" />
         <module name="coupon-distribution" />
         <module name="coupon-gateway" />
-        <module name="coupon-settlement" />
+        <module name="coupon-common" />
       </profile>
     </annotationProcessing>
   </component>
