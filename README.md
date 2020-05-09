@@ -3,13 +3,9 @@
 ## 技术栈
 
 SpingBoot<br>
-
 SpringCloud<br>
-
 MySQL<br>
-
 Redis<br>
-
 Kafka<br>
 
 ## 系统架构图
