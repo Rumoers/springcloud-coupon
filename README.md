@@ -6,7 +6,7 @@ SpingBoot<br>
 SpringCloud<br>
 MySQL<br>
 Redis<br>
-Kafka<br>
+RabbitMQ<br>
 
 ## 系统架构图
 
@@ -61,4 +61,4 @@ Kafka<br>
 1. 使用Redis做缓存提高访问速度与并发量，减少数据库压力
 2. 使用异步线程生成优惠券码
 3. 仿照Redis过期册，使用定期删除+惰性删除方法，检测删除过期的优惠券模版
-4. 使用Kafka异步处理已使用与已过期优惠券信息回写到数据库
+4. 使用RabbitMQ异步处理已使用与已过期优惠券信息回写到数据库
